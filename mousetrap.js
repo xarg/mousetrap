@@ -164,7 +164,8 @@
      */
     function _addEvent(object, type, callback) {
         if (object.addEventListener) {
-            object.addEventListener(type, callback, false);
+            // XXX (@humanfromearth): Use usertrap - for Gmail
+            object.addEventListener(type, callback, true);
             return;
         }
 
